@@ -1,0 +1,84 @@
+<!doctype html>  
+<html lang=en>
+	
+	<head>
+		<meta charset=utf-8>
+		<title> A Pixie </title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Alex+Brush|Original+Surfer' rel='stylesheet' type='text/css'>
+		
+		<link rel=stylesheet href=css/reset.css>
+		<link rel=stylesheet href=css/main.css>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);      // TODO
+  _gaq.push(['_setDomainName', 'diwank.name']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+	
+	<body>
+		
+		<div id=reveal>
+			
+			<div class=slides>
+				<section>
+
+				<h2>You seem to be lost.</h2>
+				<br/>+ This is a 404.
+				<br/>+ Call 911.
+				<br/><br/><p id="star-five"></p>
+				</section>
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class=controls>
+				<a class=left href=#>&#x25C4;</a>
+				<a class=right href=#>&#x25BA;</a>
+				<a class=up href=#>&#x25B2;</a>
+				<a class=down href=#>&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class=progress><span></span></div>
+			
+		</div>
+		
+		<script src=js/reveal.js></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: false,
+
+				// UI style
+				theme: query.theme || 'neon', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d),
+			});
+
+		</script>
+		
+	</body>
+</html>
